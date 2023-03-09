@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-color: #182C61;
+}
+
+main{
+    width: 95%;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+
+main .window{
+    width: 70%;
+}
+
+main .window .title h1{
+    font-size: 35px;
+    color: white;
+}
+
+main .window .imege{
+    width: 100%;
+}
+
+main .window .imege img{
+    width: 100%;
+    transition: opacity 0.8s linear;
+}
+
+main .window .title p{
+    font-size: 20px;
+    color: white;
+}
+
+main .sidePanel{
+    width: 30%;
+    margin: 0 20px;
+}
+
+main .sidePanel #milestons{
+    width: 100%;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+main .sidePanel #doneList {
+    margin-top: 50px;
+}
+
+main .sidePanel #milestons .mileston, 
+main .sidePanel #doneList .mileston{
+    background-color: #2C3A47;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+main .sidePanel #milestons .mileston .mileston_name p,
+main .sidePanel #doneList .mileston .mileston_name p{
+    font-size: 15px;
+    display: inline;
+}
+
+main .sidePanel #milestons .mileston .hidden,
+main .sidePanel #doneList .mileston .hidden{
+    margin-top: 10px;
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: 0.5s linear;
+}
+
+main .sidePanel #milestons .mileston .hidden.active,
+main .sidePanel #doneList .mileston .hidden.active{
+    max-height: 400px;
+    visibility: visible;
+    transition: 0.5s linear;
+}
+
+main .sidePanel #milestons .mileston .hidden p,
+main .sidePanel #doneList .mileston .hidden p{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
